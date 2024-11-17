@@ -24,6 +24,37 @@ function calculate(value) {
     }
 
     const sanitizedValue = trimmedValue.replace(/[^0-9+\-*/.]/g, '');
+
+    if (!sanitizedValue) {
+      throw new Error("Invalid input...");
+    }
+
+    const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
+    if (isNaN(calculatedValue)) {
+      throw new Error("Error!");
+    }
+
+    res.value = calculatedValue;
+
+  } catch (error) {
+    console.error("Calculation error:", error.message);
+    res.value = "Error!";
+    setTimeout(() => (res.value = ""), 2500);
+  }
+}
+
+function calculate(value) {
+  try {
+    const trimmedValue = value.trim();
+
+    if (trimmedValue === `${currCode}*`) {
+      res.value = "Reset successfully!";
+      resetit();
+      return;
+    }
+
+
+    const sanitizedValue = trimmedValue.replace(/[^0-9+\-*/.]/g, '');
     if (!sanitizedValue) {
       throw new Error("Invalid input...");
     }
