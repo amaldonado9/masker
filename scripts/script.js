@@ -11,7 +11,7 @@ function calculate(value) {
   try {
     const trimmedValue = value.trim();
 
-    if (trimmedValue === `${currCode}*`) {
+    if (trimmedValue === currCode + "*") {
       res.value = "Reset successfully!";
       resetit();
       return;
