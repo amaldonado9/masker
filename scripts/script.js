@@ -9,22 +9,18 @@ const currCode = "000000";
 
 function calculate(value) {
   try {
-    res.setAttribute("readonly", "true");
-
     if (value.trim() === `${currCode}*`) {
-      res.value = "Opened in new tab!";
+      res.value = "Reset successfully!";
       resetit();
-      setTimeout(() => res.removeAttribute("readonly"), 2500);
       return;
     }
 
     if (value.trim() === currCode) {
       res.value = "Opened in new tab!";
       boutmyBLANK();
-      setTimeout(() => res.removeAttribute("readonly"), 2500);
       return;
     }
-    
+
     const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
     if (!sanitizedValue) {
       throw new Error("Invalid input...");
@@ -38,16 +34,9 @@ function calculate(value) {
     res.value = calculatedValue;
 
   } catch (error) {
-    console.error("Calculation error:", error.message);
+    console.error("Calculation error:", error.message); // Log errors for debugging
     res.value = "Error!";
-    setTimeout(() => {
-      res.value = "";
-      res.removeAttribute("readonly");
-    }, 2500);
-  } finally {
-    if (res.value !== "Error!") {
-      res.removeAttribute("readonly");
-    }
+    setTimeout(() => (res.value = ""), 1300);
   }
 }
 
