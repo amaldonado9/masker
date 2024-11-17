@@ -11,18 +11,18 @@ function calculate(value) {
   try {
     const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
     if (!sanitizedValue) {
-      throw new Error("Invalid input");
+      throw new Error("Invalid input...");
     }
 
     if (value.trim() === currCode) {
-      res.value = "Welcome!";
+      res.value = "Opened in new tab!";
       boutmyBLANK();
       return;
     }
 
     const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
     if (isNaN(calculatedValue)) {
-      throw new Error("Calculation error");
+      throw new Error("Error!");
     }
 
     res.value = calculatedValue;
