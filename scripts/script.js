@@ -36,7 +36,7 @@ function calculate(value) {
   } catch (error) {
     console.error("Calculation error:", error.message); // Log errors for debugging
     res.value = "Error!";
-    setTimeout(() => (res.value = ""), 1300);
+    setTimeout(() => (res.value = ""), 2500);
   }
 }
 
