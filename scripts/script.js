@@ -8,16 +8,16 @@ const toast = document.getElementById("toast");
 const currCode = "000000";
 
 function calculate(value) {
-  const calculatedValue = eval(value || null);
-  if (isNaN(calculatedValue)) {
+const calculatedValue = Function(`'use strict'; return (${value || 0})`)();
+  if (isNaN(calculatedValue) || typeof calculatedValue !== "number") {
     res.value = "Can't divide 0 with 0";
     setTimeout(() => {
       res.value = "";
     }, 1300);
   } else {
     res.value = calculatedValue;
-    if (String(value) === currCode || String(calculatedValue) === currCode) {
-      boutmyBLANK();
+    if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
+    boutmyBLANK();
     } else if (String(value) === currCode + "*" || String(calculatedValue) === currCode + "*") {
       resetit();
     }
@@ -40,11 +40,10 @@ function changeTheme() {
   }
 }
 
-function liveScreen(enteredValue) {
-  if (!res.value) {
-    res.value = "";
-  }
-  res.value += enteredValue;
+if (/^[0-9+\-*/.]+$/.test(enteredValue)) {
+    res.value += enteredValue;
+} else {
+    alert("invalid much?");
 }
 
 document.addEventListener("keydown", keyboardInputHandler);
