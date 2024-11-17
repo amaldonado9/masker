@@ -13,21 +13,26 @@ function calculate(value) {
     const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
 
     if (isNaN(calculatedValue)) {
-      throw new Error("Calculation error");
+      throw new Error("Error!");
+    }
+
+    if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
+      res.value = "Welcome!";
+      boutmyBLANK();
+      return;
     }
 
     res.value = calculatedValue;
 
-    if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
-      boutmyBLANK();
-    } else if (sanitizedValue.endsWith("*") || String(calculatedValue).endsWith("*")) {
+    if (sanitizedValue.endsWith("*") || String(calculatedValue).endsWith("*")) {
       resetit();
     }
   } catch (error) {
-    res.value = "Error";
+    res.value = "Error!";
     setTimeout(() => (res.value = ""), 1300);
   }
 }
+
 
 function changeTheme() {
   const theme = document.getElementById("theme");
