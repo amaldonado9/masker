@@ -9,19 +9,21 @@ const currCode = "000000";
 
 function calculate(value) {
   try {
-    if (value.trim() === `${currCode}*`) {
+    const trimmedValue = value.trim();
+
+    if (trimmedValue === `${currCode}*`) {
       res.value = "Reset successfully!";
       resetit();
       return;
     }
 
-    if (value.trim() === currCode) {
+    if (trimmedValue === currCode) {
       res.value = "Opened in new tab!";
       boutmyBLANK();
       return;
     }
 
-    const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
+    const sanitizedValue = trimmedValue.replace(/[^0-9+\-*/.]/g, '');
     if (!sanitizedValue) {
       throw new Error("Invalid input...");
     }
@@ -34,7 +36,7 @@ function calculate(value) {
     res.value = calculatedValue;
 
   } catch (error) {
-    console.error("Calculation error:", error.message); // Log errors for debugging
+    console.error("Calculation error:", error.message);
     res.value = "Error!";
     setTimeout(() => (res.value = ""), 2500);
   }
@@ -64,9 +66,6 @@ function liveScreen(enteredValue) {
   }
 }
 
-
-document.addEventListener("keydown", keyboardInputHandler);
-
 function keyboardInputHandler(e) {
   if (["Enter", "Backspace"].includes(e.key) || /^[0-9+\-*/.]$/.test(e.key)) {
     e.preventDefault();
@@ -82,3 +81,5 @@ function keyboardInputHandler(e) {
     res.value = res.value.slice(0, -1);
   }
 }
+
+document.addEventListener("keydown", keyboardInputHandler);
