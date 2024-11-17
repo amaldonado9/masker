@@ -27,7 +27,7 @@ function calculate(value) {
 
     res.value = calculatedValue;
 
-    if (value.trim() === `${currCode}*`) {
+    if (sanitizedValue === `${currCode}*`) {
       resetit();
       return;
     }
