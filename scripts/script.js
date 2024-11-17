@@ -27,9 +27,11 @@ function calculate(value) {
 
     res.value = calculatedValue;
 
-    if (sanitizedValue.endsWith("*")) {
+    if (value.trim() === `${currCode}*`) {
       resetit();
+      return;
     }
+
   } catch (error) {
     res.value = "Error!";
     setTimeout(() => (res.value = ""), 1300);
