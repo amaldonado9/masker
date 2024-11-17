@@ -2,107 +2,114 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Calculator</title>
-  <meta name="description" content="Simple Calculator With Dark Mode." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="data:image/webp;base64,UklGRioRAABXRUJQVlA4TB4RAAAv/8F/ENV43/9rcdts21YPZj5eHe+YmZmZmZmZmY+gHcuxLHlGBzMzY7kNcyI7UDj4r2CTZsZr32dfpRknOqrDOjJW67rVHFY8TR1X8dRyZnPkRFmO3IOWZNumbVtdXj19+l3btm3fuzn3wpxjDlrbthmSpPs/R0RGZFZllse2bdu2bc/RnM+al0Tbtk05Krvi5MW2zbZt27Zt27Zt23Z/QMxCG6W3KEGy7bpt+pxTCB/AQlmfULJ3Lvnj+M/xn+M/x3/OnZqnvkdrrTMTtXRLtjytLaptbVGd1CLd0Xt8p/dYrGe06Bm/6Rl/pjIgdt7/dTmdYYHj/V/PaNZ7LN47eslwfdy/1DY9+eYFWXyukxKtDG6Lar0W6Z6esZp7jQxIIv+uDyRaGXTJqM1558c1ikQtRcnIc7RIN/SMVu6KbMgkF2iRru/M+XZlyW4gJFoZqkU62+2YrMjl0P8uGrEfDWXkk2x5hBbpfiqDk5kVCTNXJvcXbeW7m9Zad9QiXU1lsDOzUmFm76LWWnfwbUJDGYUmIy/XM1Yys4JhZj1jxUBsbIPlD5C21jqzLaoTHrOyYU5lsLVFdcyP5H4tPtcNtUgPmFnpMPNkTt5Xopapydci3WVWQMze7kjOmoYuTot0mVkRcSqDONM0dHEStqhMvJItbwpYHTEH+yuyfVa8NoP0jDXMtkEaZ6UviGRqyW4QpUW6w6ycmLVIty+U50eWErVM1jP+ZiXFlUQtE0flaFGZBHXeq6iYRy+R4Wu2zE0nPaOJFRbrGevGI9l50eNDymTL6/KstDh/xQG5mb+ZI2iRHjIrLuaRqswe1jR0WXqP5azAODgUSWstc9NOz/iLlRjX90eSWnyux6YyOFiRcb0spQKyRC0rmZUZc2utVwTyca8Tz+WJVnaxUuNEKzvHpLNk5P2s2DjZ8r4xySzRyl5WbpxoZc+YVJ6RqGUTKziuBRJZa62XsZLjo9Jo1DI1E1nRcTWSxJqGrm0qg1PZVZYMgzaRFNZQRpl6xh+s7DjYK4N+6PuSQL3HclZ4rPdYdqn4nnzzgqotqqes9Lh/RPhXj9dmAys+9gLBHxQb2o6pDKLyy8eGtlMktI/8WBSs91jHyo/Dqshue/CzItnyLSYAHvAFvq9laiaxvVCw008f/bkwSs/4iwjqB0QFyJMt305lgAh4wBP0vtjQDmQy4NjQDoiE9JpXO7z0HmsJYXZGyDNOLXOzgQmBW+ZmfSCgj/xcFK9n/E8K4bCAz0nUcplJgQvCPSWat55TmCeG/MFIMIAi0codJgZOtHJ7TrDLBZtZIyYHzkdiXSZauU8QiVbuCXURfXwxPzOVQSSI/IRIF168NseYIDhem6OeQN71aXWEntFOErkxgU45No/9FUwSXA+Ecct/v2m1nsqJQuupbL8wj15UJp2ZKHjRdtJJlAfPtdb6ClkcmRPEq17sEvSMNrLw+wV59JLdYBSTBXuBEABlopZ7hNFa67sVIbz6xc5APaODMHLDQtxuKKNhTBhcCkS4HZ/rM6QRn+vTFQHc4s8feq0nM2nsPCTASaePLRbUZ9Lgjy0W1Ivwf8ixaegWEEfT0M0H5OgBqnhtbhBHVEIP0Go9WYhjOkTvvV9WZjBx8C70Zx0WbqcjyGPhdjoiwH7WITa0W8gjW0EOUMdrc488/ptHDtBpPVXjpvfIstvn+AdkypEB9aJFqvSRe8794wGMW1tUnHTjIhntGVYvvBv5WccPfl9aH7lkZE68domMdg4qmEKE+6zj/PWcIQQyfz1nMO4zj3ONZbiAQBrLcP4c7rPOsbHdQyCxsd1dwv1aS6feWQJZOvXO4H6pMD7XjwgkPtcPAA3u0w6JWj4TSKKWTz5qgD4ZuZRAsjnctEi1BKJFqsENMOg9/iSQfbWztADGVAaRQFIZXGXcmEAYN8CNRC52/Hdep/SMLLtzlmW3z2Imp9w6x+kHP5PRzplpMylVpaFamsaTUtX2JFtmClPG0ZDMp6Xtic81qNTQkMynpe1pmRpQyaEhmU9Lx3/nfaN27NWr/OryTczkV5dusu2/72RUHB80E8bzcUfkn5aDx164y4nnHpIpx164y6DJT0vbk2yZ2NDSUEaYyaLthN9euU5GF/YfNpMxibzvYOywqSwuYxaVCZkyfdjkp6XtqQ4nI2MmteOvXyGjvbVBMxmWyPuOhgdNZTxzBk1+WtL/faeO/xz/Of47x5/hpqFj3noOH1/Op/cM7hkmtoHxWq731MYH6EG8OP5z/Of4z/Gf4z/Hf47/zrXsSgIFaAzknvOfej3kL2Azudh1/Kdg/gw2E8d/jsz+BDYTx3+OTP4INhPHf+fK9AewmTj+O0em34PN5DxWVX/xagfbTz7jU61glWj7yRf84tV2qgRV/dnLXfx1739M7Tj2ilSrsUZ42tHXTBV+9nInVQLAuKnOWrSprqo/jOtWa9a9yg/hLGq449hrpqZ6FqXfgc0EOXzrpebXWxUfuvVas+u9MnImfA8wxZUcbMtQc8tUCdkO7wdMqUsOsmWsmWWufKQBFZYcXMvcVCsYn5FKxxZApSI5qGaoRmes1KNFouP4C6amDNbQjGVEiwT1JCMT20xIH/qA4Vq0K5rKhEHqGWiZGxpWc7Gm4SGjW7yey/QA9bDWE2ZqzbKMzJnQ99kMqFzq9nmwvxCmpg99xHCtmcoTolZM6YlR81N7QnT78VdcZnaKT5QaX71zqk+Qbj/2ih1HX2Fmyk+Umpn6w1iLJytp+Dx8CkxFhyRkyuzFpuKz7KCspcPqDOj7bIW1sBxMZRlkzpWmMjh2sM+D/dedoGz7wY9YOHk5HbbDNjCVscyJTKV+uewgrWVDTDKRHay1aEQgaNOHPtI1KsBbC0YGiGt6dIC5JkcIqGtqBMbZ+NDRfuQdRtXjQ0uWSeyyCeM3JlItQ2KXDZl5yNAIepfbTJDDPFPZfvwlI4SAeWZLB4hnvqQ10jkrSgVoZ02JAOusqsycBt+F74CpfBO+CpkSnG8qFxUlB+msq8R0wPsBU4YlB+esrLwge9+p5Iiy9MFPtP//GaPVI4NVse+zAVA5XOzzICfI2g9+YsFiAQPtBz9jtKmoUH+CrGE1l6VTj/668So/QTadzU6bqOrDtbyJMZuq4hNmJqv2RFmPdvz/GcNVeoLMgqo8MWZJyUfvka0nn2NqlnTryWcMUE8yMj96fIC/7v0fQ8br01lmS1r84ZMDDCKzA/o+6wGVMN/nQQ7L/3d2LRJ7vn3/GEXDs6TFbz04xp4RlbEDF27lfVh+3+lEKzTuhlSKBmesBlYOqipjGz8BI3aYamhGa2iysRE+BzrgST4rN4BBi1TLqGpgxmtg0pGG1XAq4EmV+9xWamq4JSOXpjKAqxlnoh0Hv5Bx8rEdhtsBT4brfa6dEtwAfWutvzCyZpi5ZhhC9pJNfM7h1jI3jxlbe53Z9jrVsYGHuAG62NieZ4z9T306y2y+vUx5rOGcjxqgbdwN9zO+9pgV7TGUtoO9ZAV7AQ1qgHrhdro4lQF87f5bSlnS9kMf6DYFcjyL86gBqo8uFg5ndN3TWIZMZ5mtaX1P51TIzxhWQg1QvO39+qaMrlokkpHJMlvUwZEqK5HP02QONUD+qMs3wgX/e2eokZcT7qEGSAH3tqhqyCNNVTZCza0tnXoPyWMtD2subv7iMt5JHiez00cu/7HFgnHk8XPG5ZEDlK9+sbOQPJopqCAHyAAvrSeLHdkGdpJ2LEMBci5gbJ76d4hjNXfKLnbhvPWc5cTxG5aH6JXe/HZTK+L4FC1L6Hk3+OMXXy2ShTRmboavhx4gLTcN3UXSWM6FMiBFzw0/8mPRBNL4KeNnXfwA5aOvXI/VM9oJYyv2VxBbEUAAeDRP/ceEsZpHM4EAXED30Z8LpxLGT5jiuyKoPPj8vVg9o812jNlGOrA9g5iKEIJsbGxvkcVKbmYDIbjhuz+v6k8WX6Vf6Iph7vq//yokW64kik1U3hQBUAgCkJYXbGYbieJYNpYjQbiA+im3zmfkSKID+1vJyLuiCADPxjI8RxKncHZfIAw3fNmzfU1TGUSC2Iq4mKahKw4P8G6e+k8IYhVP+j2BRIDuDW+2diaIJJ38SCDuHODTPPYfkcMqHgE+c65IIv/VL3a2zRPDwRhtuy7FuogN7W070QF2kOXc6roU7OJZ907W03u0kUIa23up50eCcT3Aa8FmtpsUfsuuIc8VLoDmrsdex2mRTISwGdMjiZt1xQPIsu/7umIiIXyLidlAQG4JEJrH/iMyWMkjQCi5IooA/ZNvXsjXe/xNBGl+v5n8XCQk1wM8P/xj8QIi+AEL9nmuoAHU19j/d+A0CRy5FoF5V1RR7lGXb2S2RWUmgM2YX0pmLhKW6wEeb/+wbmgqg6j8OhC/wNAZzxU4JcBv/mbOPlvQDlLPr9lXKAESkUWA9oZ//AxbOvXeKL6VvL45YWEkNDcADA+/eDsz2XKV0ttA1QvJrAWu4PFmXvT4UFutp18KbzO/Pk7bzgcJH0AJeL/xzZaBekaXskvjaGNgf8UVX1QqfPjH4sXK7gcsLpQiVwYFNEDAJ1bztim6n7NtdLZzUqgPBC3YzA4qud9w4KgfuZJI4F99/z8hi7aTkwruOE5eixA/cKWRANBfff8/oYvL+IxyO54z1yIU0HdOKl24nR5TbMdyrNvkUiD4k6u5O5TaL9gx2TXZ9OgHvi1bqGd0KrM0zm+z8GjXpFN/9E1vNg/XevqjyDbzR2P4qG9gcjj/UHjBo8Mdki1XSVoaJJv1VH2EDoXZyJVSIkDV/4CzD3Oax/4rBbacV08lu7/UOUkVUAIe1//916h5qzn78oorjfgL9t2EqJlK5MorXg0Ifuv7DaO1SBaltQnLZxg9WfMAidQCyMLCg8/fK4yN7XOFtYynz6awEPb6+rJ6CcDz6vv+ifjg96XL9R7/KKrzv8OyaxKxrxS58osH6IGAJ1y/1Dg2ts+U1DKevZpGo7keD5PenYAa8ALC3/1p1Yy2qEzKaSOmLzNjYijf414p3gn43+Hwh/T5mzmH9Yx2pbQF+684fF/SDmS6V34vCbhPPvXWuRZLhsGDVAZRGaURT+bBW2gxmS1FrlwTzA4BYS99sr9HbGyfK6Ld8+hxZGg2cOUbD9ABPkD4K5/v7hcb25epDKLySSMu40UD/YDwaR+Qu1JOBChygO/Ec+4f79RQRlf0jHalswX78Vx5H50m9vpzXc+S9RUf8AZCH37xdoNPLOftSrZco2zWU/NTdr2ABgP9XddknsgLAc+j1/3t9/g3vd08umnoHuYUzBbsp/BQY/SNiD+6L/QiQCL9BIAaMBYm7n7sZe57v6xcEBvbF3pGp8RsAQllM85TefE1FjyK3IkCYMxn/NGmxF86nDkARNzn1NOCd31aPauxDK9rkayKZCPWE7j+RWY9kYLigZlwLnJtJAGg9GcAAQi71oG/4l/85GDPj/5cuKlp6B4dVhx7T+bRD9j0CXpel/gjgDDjA8oej7eXO8JyPxA4cbV9/8Y98+6pdu/+vGru/M2cY81T/01bVGYlsQHzct78imNfZu67aAfETuzuL4cm75H8j0IBVVgGvAABCCnuuuOR97nPe3C0y1vebZzwoR9LVs82lNG1pqF71jI3XxOtlLVFZdIi/aymMog2bgviRn6ObsC0lrKVfD2ZZ8dz7fB3WZ1iwgfo8iBydxVHAAHwKoclQB659pYoAJSAxgcMgPtQAQgAgoGwIhAFRO8C4g4C8Xaegwd3XX6oeGRytDCUrfmzlSBy7TKRByhKgDr0AX2uViuXATf7Trlcq+VyfpgvzXmRS/44/nP85/jP8Z/jP8d/Z/VxAQ==">
-  <link rel="stylesheet" href="https://amaldonado9.github.io/masker/styles/dark.css" id="theme" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="Simple Calculator With Dark Mode." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="data:image/webp;base64,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">
+    <link rel="stylesheet" href="https://amaldonado9.github.io/masker/styles/dark.css" id="theme" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <div class="header-container">
-        <!-- This heading also notifies about the theme change.-->
-        <h1 id="toast">Calculator</h1>
-        <div class="top-buttons">
-         <a href="https://github.com/amaldonado9/masker">
-            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPiAgICA8cGF0aCBkPSJNMTAuOSwyLjFjLTQuNiwwLjUtOC4zLDQuMi04LjgsOC43Yy0wLjUsNC43LDIuMiw4LjksNi4zLDEwLjVDOC43LDIxLjQsOSwyMS4yLDksMjAuOHYtMS42YzAsMC0wLjQsMC4xLTAuOSwwLjEgYy0xLjQsMC0yLTEuMi0yLjEtMS45Yy0wLjEtMC40LTAuMy0wLjctMC42LTFDNS4xLDE2LjMsNSwxNi4zLDUsMTYuMkM1LDE2LDUuMywxNiw1LjQsMTZjMC42LDAsMS4xLDAuNywxLjMsMWMwLjUsMC44LDEuMSwxLDEuNCwxIGMwLjQsMCwwLjctMC4xLDAuOS0wLjJjMC4xLTAuNywwLjQtMS40LDEtMS44Yy0yLjMtMC41LTQtMS44LTQtNGMwLTEuMSwwLjUtMi4yLDEuMi0zQzcuMSw4LjgsNyw4LjMsNyw3LjZDNyw3LjIsNyw2LjYsNy4zLDYgYzAsMCwxLjQsMCwyLjgsMS4zQzEwLjYsNy4xLDExLjMsNywxMiw3czEuNCwwLjEsMiwwLjNDMTUuMyw2LDE2LjgsNiwxNi44LDZDMTcsNi42LDE3LDcuMiwxNyw3LjZjMCwwLjgtMC4xLDEuMi0wLjIsMS40IGMwLjcsMC44LDEuMiwxLjgsMS4yLDNjMCwyLjItMS43LDMuNS00LDRjMC42LDAuNSwxLDEuNCwxLDIuM3YyLjZjMCwwLjMsMC4zLDAuNiwwLjcsMC41YzMuNy0xLjUsNi4zLTUuMSw2LjMtOS4zIEMyMiw2LjEsMTYuOSwxLjQsMTAuOSwyLjF6Ii8+PC9zdmc+" alt="GitHub Icon" height="22.5" width="22.5" id="github-icon">
-          </a>
-          <button type="button" onclick="changeTheme()" class="theme-button">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNzYgNC4yOUwzLjk2IDIuNUwyLjU1IDMuOTFMNC4zNCA1LjdMNS43NiA0LjI5Wk0zIDkuOTVIMFYxMS45NUgzVjkuOTVaTTEyIDBIMTBWMi45NUgxMlYwWk0xOS40NSAzLjkxTDE4LjA0IDIuNUwxNi4yNSA0LjI5TDE3LjY2IDUuN0wxOS40NSAzLjkxWk0xNi4yNCAxNy42MUwxOC4wMyAxOS40MUwxOS40NCAxOEwxNy42NCAxNi4yMUwxNi4yNCAxNy42MVpNMTkgOS45NVYxMS45NUgyMlY5Ljk1SDE5Wk0xMSA0Ljk1QzcuNjkgNC45NSA1IDcuNjQgNSAxMC45NUM1IDE0LjI2IDcuNjkgMTYuOTUgMTEgMTYuOTVDMTQuMzEgMTYuOTUgMTcgMTQuMjYgMTcgMTAuOTVDMTcgNy42NCAxNC4zMSA0Ljk1IDExIDQuOTVaTTEwIDIxLjlIMTJWMTguOTVIMTBWMjEuOVpNMi41NSAxNy45OUwzLjk2IDE5LjRMNS43NSAxNy42TDQuMzQgMTYuMTlMMi41NSAxNy45OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Theme Icon" height="19" width="19" id="theme-icon">
-          </button>
-        </div>
-      </div>
-      <div class="first-row">
-        <input type="text" name="result" id="result" placeholder="Result" readonly />
-        <input type="button" value="C" onclick="result.value=''" id="clear-button" />
-      </div>
-      <div class="second-row">
-        <input type="button" value="1" onclick="liveScreen(1)" />
-        <input type="button" value="2" onclick="liveScreen(2)" />
-        <input type="button" value="3" onclick="liveScreen(3)" />
-        <input type="button" value="+" onclick="liveScreen('+')" />
-      </div>
-      <div class="third-row">
-        <input type="button" value="4" onclick=" liveScreen(4)" />
-        <input type="button" value="5" onclick=" liveScreen(5)" />
-        <input type="button" value="6" onclick=" liveScreen(6)" />
-        <input type="button" value="-" onclick="liveScreen('-')" />
-      </div>
-      <div class="fourth-row">
-        <input type="button" value="7" onclick="liveScreen(7)" />
-        <input type="button" value="8" onclick="liveScreen(8)" />
-        <input type="button" value="9" onclick=" liveScreen(9)" />
-        <input type="button" value="x" onclick="liveScreen('*')" />
-      </div>
-      <div class="fifth-row">
-        <input type="button" value="/" onclick="liveScreen('/')" />
-        <input type="button" value="0" onclick="liveScreen(0)" />
-        <input type="button" value="." onclick="liveScreen('.')" />
-        <input type="button" value="=" onclick="calculate(result.value)" />
-      </div>
-    <script type="text/javascript">
-    let currCode = "000000";
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                <!-- This heading also notifies about the theme change.-->
+                <h1 id="toast">Calculator</h1>
+                <div class="top-buttons">
+                    <a href="https://github.com/amaldonado9/masker">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPiAgICA8cGF0aCBkPSJNMTAuOSwyLjFjLTQuNiwwLjUtOC4zLDQuMi04LjgsOC43Yy0wLjUsNC43LDIuMiw4LjksNi4zLDEwLjVDOC43LDIxLjQsOSwyMS4yLDksMjAuOHYtMS42YzAsMC0wLjQsMC4xLTAuOSwwLjEgYy0xLjQsMC0yLTEuMi0yLjEtMS45Yy0wLjEtMC40LTAuMy0wLjctMC42LTFDNS4xLDE2LjMsNSwxNi4zLDUsMTYuMkM1LDE2LDUuMywxNiw1LjQsMTZjMC42LDAsMS4xLDAuNywxLjMsMWMwLjUsMC44LDEuMSwxLDEuNCwxIGMwLjQsMCwwLjctMC4xLDAuOS0wLjJjMC4xLTAuNywwLjQtMS40LDEtMS44Yy0yLjMtMC41LTQtMS44LTQtNGMwLTEuMSwwLjUtMi4yLDEuMi0zQzcuMSw4LjgsNyw4LjMsNyw3LjZDNyw3LjIsNyw2LjYsNy4zLDYgYzAsMCwxLjQsMCwyLjgsMS4zQzEwLjYsNy4xLDExLjMsNywxMiw3czEuNCwwLjEsMiwwLjNDMTUuMyw2LDE2LjgsNiwxNi44LDZDMTcsNi42LDE3LDcuMiwxNyw3LjZjMCwwLjgtMC4xLDEuMi0wLjIsMS40IGMwLjcsMC44LDEuMiwxLjgsMS4yLDNjMCwyLjItMS43LDMuNS00LDRjMC42LDAuNSwxLDEuNCwxLDIuM3YyLjZjMCwwLjMsMC4zLDAuNiwwLjcsMC41YzMuNy0xLjUsNi4zLTUuMSw2LjMtOS4zIEMyMiw2LjEsMTYuOSwxLjQsMTAuOSwyLjF6Ii8+PC9zdmc+" alt="GitHub Icon" height="22.5" width="22.5" id="github-icon">
+                    </a>
+                    <button type="button" onclick="changeTheme()" class="theme-button">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNzYgNC4yOUwzLjk2IDIuNUwyLjU1IDMuOTFMNC4zNCA1LjdMNS43NiA0LjI5Wk0zIDkuOTVIMFYxMS45NUgzVjkuOTVaTTEyIDBIMTBWMi45NUgxMlYwWk0xOS40NSAzLjkxTDE4LjA0IDIuNUwxNi4yNSA0LjI5TDE3LjY2IDUuN0wxOS40NSAzLjkxWk0xNi4yNCAxNy42MUwxOC4wMyAxOS40MUwxOS40NCAxOEwxNy42NCAxNi4yMUwxNi4yNCAxNy42MVpNMTkgOS45NVYxMS45NUgyMlY5Ljk1SDE5Wk0xMSA0Ljk1QzcuNjkgNC45NSA1IDcuNjQgNSAxMC45NUM1IDE0LjI2IDcuNjkgMTYuOTUgMTEgMTYuOTVDMTQuMzEgMTYuOTUgMTcgMTQuMjYgMTcgMTAuOTVDMTcgNy42NCAxNC4zMSA0Ljk1IDExIDQuOTVaTTEwIDIxLjlIMTJWMTguOTVIMTBWMjEuOVpNMi41NSAxNy45OUwzLjk2IDE5LjRMNS43NSAxNy42TDQuMzQgMTYuMTlMMi41NSAxNy45OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Theme Icon" height="19" width="19" id="theme-icon">
+                    </button>
+                </div>
+            </div>
+            <div class="first-row">
+                <input type="text" name="result" id="result" placeholder="Result" readonly />
+                <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+            </div>
+            <div class="second-row">
+                <input type="button" value="1" onclick="liveScreen(1)" />
+                <input type="button" value="2" onclick="liveScreen(2)" />
+                <input type="button" value="3" onclick="liveScreen(3)" />
+                <input type="button" value="+" onclick="liveScreen('+')" />
+            </div>
+            <div class="third-row">
+                <input type="button" value="4" onclick=" liveScreen(4)" />
+                <input type="button" value="5" onclick=" liveScreen(5)" />
+                <input type="button" value="6" onclick=" liveScreen(6)" />
+                <input type="button" value="-" onclick="liveScreen('-')" />
+            </div>
+            <div class="fourth-row">
+                <input type="button" value="7" onclick="liveScreen(7)" />
+                <input type="button" value="8" onclick="liveScreen(8)" />
+                <input type="button" value="9" onclick=" liveScreen(9)" />
+                <input type="button" value="x" onclick="liveScreen('*')" />
+            </div>
+            <div class="fifth-row">
+                <input type="button" value="/" onclick="liveScreen('/')" />
+                <input type="button" value="0" onclick="liveScreen(0)" />
+                <input type="button" value="." onclick="liveScreen('.')" />
+                <input type="button" value="=" onclick="calculate(result.value)" />
+            </div>
+            <script type="text/javascript">
+                let currCode = '000000';
 
-        function resetit() {
-            let tempCode = currCode;
+                window.onload = function() {
+                    if (localStorage.getItem('currCode')) {
+                        currCode = localStorage.getItem('currCode');
+                    }
+                };
 
-            let rassign = prompt("Enter a special code to use from now on comprised of numbers. The choice is yours. (There is no limit to however many numbers you want to use, but a max. of 16 is recommended for readability.)");
+                function resetit() {
+                    let tempCode = currCode;
 
-            if (rassign !== null && rassign !== "" && !isNaN(rassign)) {
-              alert("Your code has been selected, type in [YOUR CODE HERE]* to reset it again.");
-                currCode = rassign;
-            } else {
-                alert("The code you pick must only contain numbers, please try again.");
-                currCode = tempCode;
-                resetit();
-            }
-        }
-      
-        function boutmyBLANK() {
-            let url = prompt("Enter a URL if you dare.", "https://");
+                    let rassign = prompt("Enter a special code to use from now on comprised of numbers. The choice is yours. (There is no limit to however many numbers you want to use, but a max. of 16 is recommended for readability.)");
 
-            if (url == null || url == "") {
-                alert("That's right. Don't even bother coming back.");
-                window.location.href = 'about:blank';
-            } else {
-                let win = window.open('about:blank');
-                win.document.body.style.margin = '0';
-                win.document.body.style.height = '100vh';
-                let iframe = win.document.createElement('iframe');
-                iframe.style.border = 'none';
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.margin = '0';
-                iframe.src = url;
-                win.document.body.appendChild(iframe);
-                location.reload();
-            }
-        }
-    </script>
+                    if (rassign !== null && rassign !== "" && !isNaN(rassign)) {
+                        alert("Your code has been selected, type in [YOUR CODE HERE]* to reset it again.");
+                        currCode = rassign;
+                        localStorage.setItem('currCode', currCode);
+                    } else {
+                        alert("The code you pick must only contain numbers, please try again.");
+                        currCode = tempCode;
+                    }
+                }
+
+                function boutmyBLANK() {
+                    let url = prompt("Enter a URL if you dare.", "https://");
+
+                    if (url == null || url == "") {
+                        alert("That's right. Don't even bother coming back.");
+                        window.location.href = 'about:blank';
+                    } else {
+                        let win = window.open('about:blank');
+                        win.document.body.style.margin = '0';
+                        win.document.body.style.height = '100vh';
+                        let iframe = win.document.createElement('iframe');
+                        iframe.style.border = 'none';
+                        iframe.style.width = '100%';
+                        iframe.style.height = '100%';
+                        iframe.style.margin = '0';
+                        iframe.src = url;
+                        win.document.body.appendChild(iframe);
+                        location.reload();
+                    }
+                }
+            </script>
 </body>
+
 </html>
 
-    </div>
-  </div>
-  <script src="scripts/script.js">
-  </script>
+</div>
+</div>
+<script src="scripts/script.js">
+</script>
 </body>
 
 </html>
