@@ -10,21 +10,24 @@ const currCode = "000000";
 function calculate(value) {
   try {
     const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
-    const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
-
-    if (isNaN(calculatedValue)) {
-      throw new Error("Error!");
+    if (!sanitizedValue) {
+      throw new Error("Invalid input");
     }
 
-    if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
+    if (value.trim() === currCode) {
       res.value = "Welcome!";
       boutmyBLANK();
       return;
     }
 
+    const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
+    if (isNaN(calculatedValue)) {
+      throw new Error("Calculation error");
+    }
+
     res.value = calculatedValue;
 
-    if (sanitizedValue.endsWith("*") || String(calculatedValue).endsWith("*")) {
+    if (sanitizedValue.endsWith("*")) {
       resetit();
     }
   } catch (error) {
@@ -32,7 +35,6 @@ function calculate(value) {
     setTimeout(() => (res.value = ""), 1300);
   }
 }
-
 
 function changeTheme() {
   const theme = document.getElementById("theme");
