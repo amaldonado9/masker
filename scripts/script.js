@@ -8,16 +8,24 @@ const toast = document.getElementById("toast");
 const currCode = "000000";
 
 function calculate(value) {
-const calculatedValue = Function(`'use strict'; return (${value || 0})`)();
-  if (isNaN(calculatedValue) || typeof calculatedValue !== "number") {
-    res.value = "Can't divide 0 with 0";
-    setTimeout(() => {
-      res.value = "";
-    }, 1300);
-  } else {
+  try {
+    const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
+    const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
+
+    if (isNaN(calculatedValue)) {
+      throw new Error("Calculation error");
+    }
+
     res.value = calculatedValue;
+
     if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
-    boutmyBLANK();
+      boutmyBLANK();
+    } else if (sanitizedValue.endsWith("*") || String(calculatedValue).endsWith("*")) {
+      resetit();
+    }
+  } catch (error) {
+    res.value = "Error";
+    setTimeout(() => (res.value = ""), 1300);
   }
 }
 
@@ -37,31 +45,29 @@ function changeTheme() {
   }
 }
 
-if (/^[0-9+\-*/.]+$/.test(enteredValue)) {
+function liveScreen(enteredValue) {
+  if (/^[0-9+\-*/.]$/.test(enteredValue)) {
     res.value += enteredValue;
-} else {
-    alert("invalid much?");
+  } else {
+    alert("Invalid input!");
+  }
 }
+
 
 document.addEventListener("keydown", keyboardInputHandler);
 
 function keyboardInputHandler(e) {
-  e.preventDefault();
+  if (["Enter", "Backspace"].includes(e.key) || /^[0-9+\-*/.]$/.test(e.key)) {
+    e.preventDefault();
+  }
 
   if (e.key >= "0" && e.key <= "9") {
     res.value += e.key;
-  }
-
-  if (["+", "-", "*", "/", "."].includes(e.key)) {
+  } else if (["+", "-", "*", "/", "."].includes(e.key)) {
     res.value += e.key;
-  }
-
-  if (e.key === "Enter") {
+  } else if (e.key === "Enter") {
     calculate(res.value);
-  }
-
-  if (e.key === "Backspace") {
-    const resultInput = res.value;
-    res.value = resultInput.substring(0, res.value.length - 1);
+  } else if (e.key === "Backspace") {
+    res.value = res.value.slice(0, -1);
   }
 }
