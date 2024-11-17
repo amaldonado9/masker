@@ -13,6 +13,7 @@ function calculate(value) {
     const trimmedValue = value.trim();
 
     if (trimmedValue === currCode + "*") {
+      res.value = "Reset successfully!";
       resetit();
       return;
     }
@@ -23,7 +24,7 @@ function calculate(value) {
       return;
     }
 
-    const sanitizedValue = trimmedValue.replace(/[^0-9+\-*/.]/g, ""); // Keep only valid characters
+    const sanitizedValue = trimmedValue.replace(/[^0-9+\-*/.]/g, "");
 
     if (!sanitizedValue) {
       throw new Error("Invalid input...");
@@ -40,7 +41,7 @@ function calculate(value) {
     res.value = calculatedValue;
   } catch (error) {
     res.value = "Error!";
-    setTimeout(() => (res.value = ""), 2500);
+    setTimeout(() => (res.value = ""), 4000);
   }
 }
 
