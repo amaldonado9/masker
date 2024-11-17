@@ -9,15 +9,21 @@ const currCode = "000000";
 
 function calculate(value) {
   try {
-    const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
-    if (!sanitizedValue) {
-      throw new Error("Invalid input...");
+    if (value.trim() === `${currCode}*`) {
+      alert("test working!");
+      resetit();
+      return;
     }
 
     if (value.trim() === currCode) {
       res.value = "Opened in new tab!";
       boutmyBLANK();
       return;
+    }
+
+    const sanitizedValue = value.replace(/[^0-9+\-*/.]/g, '');
+    if (!sanitizedValue) {
+      throw new Error("Invalid input...");
     }
 
     const calculatedValue = Function(`'use strict'; return (${sanitizedValue || 0})`)();
@@ -27,13 +33,8 @@ function calculate(value) {
 
     res.value = calculatedValue;
 
-    if (value.trim() === `${currCode}*`) {
-      alert("test working!");
-      resetit();
-      return;
-  }
-
   } catch (error) {
+    console.error("Calculation error:", error.message); // Log errors for debugging
     res.value = "Error!";
     setTimeout(() => (res.value = ""), 1300);
   }
