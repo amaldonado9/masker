@@ -18,9 +18,6 @@ const calculatedValue = Function(`'use strict'; return (${value || 0})`)();
     res.value = calculatedValue;
     if (value.trim() === currCode || String(calculatedValue).trim() === currCode) {
     boutmyBLANK();
-    } else if (String(value) === currCode + "*" || String(calculatedValue) === currCode + "*") {
-      resetit();
-    }
   }
 }
 
