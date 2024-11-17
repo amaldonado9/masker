@@ -5,7 +5,7 @@ const moonIcon = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTUi
 const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
-const currCode = 000000
+const currCode = "000000";
 
 function calculate(value) {
   const calculatedValue = eval(value || null);
@@ -16,9 +16,9 @@ function calculate(value) {
     }, 1300);
   } else {
     res.value = calculatedValue;
-    if (value === currCode || calculatedValue === currCode) {
+    if (String(value) === currCode || String(calculatedValue) === currCode) {
       boutmyBLANK();
-    } else if (value === "currCode" + "*" || calculatedValue === currCode + "*" {
+    } else if (String(value) === currCode + "*" || String(calculatedValue) === currCode + "*") {
       resetit();
     }
   }
