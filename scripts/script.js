@@ -14,7 +14,7 @@ function calculate(value) {
       throw new Error("Invalid input...");
     }
 
-    if (value.trim() === currCode) {
+    if (sanitizedValue === currCode) {
       res.value = "Opened in new tab!";
       boutmyBLANK();
       return;
