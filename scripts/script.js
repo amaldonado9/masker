@@ -10,10 +10,16 @@ const currCode = "000000";
 function calculate(value) {
   try {
     const trimmedValue = value.trim();
-    
+
     if (trimmedValue === `${currCode}*`) {
       res.value = "Reset successfully!";
       resetit();
+      return;
+    }
+
+    if (trimmedValue === currCode) {
+      res.value = "Opened in new tab!";
+      boutmyBLANK();
       return;
     }
 
