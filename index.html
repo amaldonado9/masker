@@ -87,6 +87,8 @@
                     if (url == "") {
                         alert("Please enter a valid URL.");
                         boutmyBLANK();
+                    } else if (url == null) {
+                        return;
                     } else {
                         let win = window.open('about:blank');
                         win.document.body.style.margin = '0';
