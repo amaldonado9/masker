@@ -84,9 +84,9 @@
                 function boutmyBLANK() {
                     let url = prompt("Enter a URL if you dare.", "https://");
 
-                    if (url == null || url == "") {
-                        alert("That's right. Don't even bother coming back.");
-                        window.location.href = 'about:blank';
+                    if (url == "") {
+                        alert("Please enter a valid URL.");
+                        boutmyBLANK();
                     } else {
                         let win = window.open('about:blank');
                         win.document.body.style.margin = '0';
