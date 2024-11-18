@@ -17,16 +17,24 @@ function calculate(value) {
     try {
         const trimmedValue = value.trim();
 
+        res.readOnly = true;
+        
         if (trimmedValue === currCode + "*") {
             res.value = "Reset successfully!";
-            setTimeout(() => (res.value = ""), 3500);
+            setTimeout(() => {
+                res.value = "";
+                res.readOnly = false;
+            }, 3500);
             resetit();
             return;
         }
 
         if (trimmedValue === currCode) {
             res.value = "Opened in new tab!";
-            setTimeout(() => (res.value = ""), 3500);
+            setTimeout(() => {
+                res.value = "";
+                res.readOnly = false;
+            }, 3500);
             boutmyBLANK();
             return;
         }
@@ -35,7 +43,10 @@ function calculate(value) {
 
         if (!sanitizedValue) {
             throw new Error("Invalid input...");
-            setTimeout(() => (res.value = ""), 3500);
+            setTimeout(() => {
+                res.value = "";
+                res.readOnly = false;
+            }, 3500);
         }
 
         const calculatedValue = Function(
@@ -44,13 +55,19 @@ function calculate(value) {
 
         if (isNaN(calculatedValue)) {
             throw new Error("Error!");
-            setTimeout(() => (res.value = ""), 3500);
+            setTimeout(() => {
+                res.value = "";
+                res.readOnly = false;
+            }, 3500);
         }
 
         res.value = calculatedValue;
     } catch (error) {
         res.value = "Error!";
-        setTimeout(() => (res.value = ""), 3500);
+        setTimeout(() => {
+                res.value = "";
+                res.readOnly = false;
+            }, 3500);
     }
 }
 
