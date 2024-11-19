@@ -1,9 +1,10 @@
-masker / mask·er  
-*a thing that masks or [conceals](https://www.google.com/search?safe=active&sca_esv=f6e2e6c9a2f5cac4&rlz=1CASACE_enUS1126&q=conceals&si=ACC90nx67Z8g0WkBmnrPB4IqtqGvrZGK1lBZlnnTATlm1MbKHw9RJor6KHxOE8ZIcDpN-15l9g1bIUKwDq30Cgs4WZziAt_vVWmmI6D9JgxdT2Rcte_5Jf4%3D&expnd=1&sa=X&ved=2ahUKEwivyfDq1-eJAxX8M0QIHZTXC5YQyecJegQIIxAO) something else.*
+# masker / mask·er  
+### *a thing that masks or conceals something else.*
 
-\-from the Oxford English Dictionary, (as of) 2024
+**\-from the Oxford English Dictionary, (as of) 2024**
 
-To put it simply, masker conceals the webpage you want to view in a sneaky way, unless you take a look at the code. Other than that, it seems flawless... right? Okay.
+To put it simply, masker conceals the webpage you want to view in a sneaky way, unless you take a look at the code. 
+Other than that, it seems flawless... right? Okay.
 
 **Well, what exactly does it do anyway?**
 
@@ -17,4 +18,4 @@ To put it simply, masker conceals the webpage you want to view in a sneaky way, 
 
 
 AND THAT’S IT\! I am terrible at making READMEs, so don’t expect much from me. Goodbye for now, and enjoy\!  
-(P.S., you can download masker for local use by clicking “Code” at the top of the page and then clicking “Download ZIP”, or you can try it out now on [here](https://amaldonado9.github.io/masker))
+(P.S., you can download masker for local use by clicking “Code” at the top of the page and then clicking “Download ZIP”, or you can try it out now right [here](https://amaldonado9.github.io/masker))
