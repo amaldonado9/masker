@@ -84,6 +84,8 @@
                 function boutmyBLANK() {
                     let url = prompt("Enter a URL if you dare.", "https://");
 
+                    if (!url.startsWith("https://")) {
+                    url = "https://" + url
                     if (url == "") {
                         alert("Please enter a valid URL.");
                         boutmyBLANK();
